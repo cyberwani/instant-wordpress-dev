@@ -60,7 +60,15 @@ sudo apt-get install php5-cli php5-mysql php5-gd mysql-server
 +
 NOTE: When you install +mysql-server+ your OS will configure MySQL as a system-wide service, and you may be prompted to setup a password for the +root+ MySQL user for that service. If you are using your own desktop computer, just set it to the same as your login password, and remember that's what you set it to. Instant WordPress Dev will actually be using its own non-system MySQL instance.
 
-3. Download the application.
+3. Disable *apparmor* for *mysqld*.
++
+[source,bash]
+----
+sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
+sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
+----
+
+4. Download the application.
 +
 [source,bash]
 ----

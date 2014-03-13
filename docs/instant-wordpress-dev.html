@@ -897,6 +897,18 @@ http://www.gnu.org/software/src-highlite -->
 </li>
 <li>
 <p>
+Disable <strong>apparmor</strong> for <strong>mysqld</strong>.
+</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>sudo ln -s /etc/apparmor<span style="color: #990000">.</span>d/usr<span style="color: #990000">.</span>sbin<span style="color: #990000">.</span>mysqld /etc/apparmor<span style="color: #990000">.</span>d/disable<span style="color: #990000">/</span>
+sudo apparmor_parser -R /etc/apparmor<span style="color: #990000">.</span>d/usr<span style="color: #990000">.</span>sbin<span style="color: #990000">.</span>mysqld</tt></pre></div></div>
+</li>
+<li>
+<p>
 Download the application.
 </p>
 <div class="listingblock">
@@ -1062,7 +1074,7 @@ Dispaly the URL for Instant WordPress Dev&#8217;s control panel at <a href="http
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2014-02-24 04:46:36 EST
+Last updated 2014-03-13 03:42:30 EDT
 </div>
 </div>
 </body>
